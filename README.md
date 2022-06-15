@@ -10,8 +10,8 @@ An example flake based system config with `boot.loader.raspberryPi` and `nixos-h
 {
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
-    nixos-hardware.url = "github:mattywillo/linux_rpi4_rt-nix";
-    rpi4_rt.url = "github:this/url";
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
+    rpi4_rt.url = "github:mattywillo/linux_rpi4_rt-nix";
   };
   outputs = { self, nixpkgs, nixos-hardware, rpi4_rt }: {
     nixosConfigurations.rpi = nixpkgs.lib.nixosSystem {
